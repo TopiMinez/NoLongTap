@@ -1,0 +1,52 @@
+{
+  "author": "",
+  "category": "General",
+  "extensionNamespace": "",
+  "fullName": "iOS_Longtap",
+  "helpPath": "",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLWNhbmNlbCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0xMiAyQzE3LjUgMiAyMiA2LjUgMjIgMTJTMTcuNSAyMiAxMiAyMiAyIDE3LjUgMiAxMiA2LjUgMiAxMiAyTTEyIDRDMTAuMSA0IDguNCA0LjYgNy4xIDUuN0wxOC4zIDE2LjlDMTkuMyAxNS41IDIwIDEzLjggMjAgMTJDMjAgNy42IDE2LjQgNCAxMiA0TTE2LjkgMTguM0w1LjcgNy4xQzQuNiA4LjQgNCAxMC4xIDQgMTJDNCAxNi40IDcuNiAyMCAxMiAyMEMxMy45IDIwIDE1LjYgMTkuNCAxNi45IDE4LjNaIiAvPjwvc3ZnPg==",
+  "name": "iOS_Longtap",
+  "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/d824a4069631a186d43434778d076f327535593687741dd7f8a532c2ec920d48_cancel.svg",
+  "shortDescription": "iOS Longtap Disabler",
+  "version": "1.1",
+  "description": "",
+  "tags": [],
+  "authorIds": [
+    "v5KAwe6HFmRdTg9dI5163IXVjm82"
+  ],
+  "dependencies": [],
+  "globalVariables": [],
+  "sceneVariables": [],
+  "eventsFunctions": [
+    {
+      "description": "Trigger once in the opening scene.",
+      "fullName": "Disable Longtap",
+      "functionType": "Action",
+      "name": "Function",
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "document.addEventListener('touchstart', (e) => {",
+            "    e.preventDefault();",
+            "    if(e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT') {",
+            "        e.target.click();",
+            "    }",
+            "}, {",
+            "passive: false,",
+            "});",
+            ""
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
+}
